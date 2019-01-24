@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# shellcheck disable=SC1091
+source /var/vcap/packages/golang-1-linux/bosh/compile.env
+
+mkdir -p "${GOPATH}/src"
+cp -r github.com "${GOPATH}/src/github.com"
+
+(
+cd "${GOPATH}/src/github.com/containerd/containerd"
+BUILDTAGS=no_btrfs make
+cp -R bin "${BOSH_INSTALL_TARGET}"
+)

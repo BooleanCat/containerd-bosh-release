@@ -1,0 +1,4 @@
+---
+name: containerd
+dependencies: [golang-1-linux]
+files: [github.com/containerd/containerd/**/*]
