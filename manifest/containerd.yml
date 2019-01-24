@@ -1,0 +1,28 @@
+name: containerd
+
+releases:
+- name: containerd
+  version: latest
+
+stemcells:
+- alias: xenial
+  os: ubuntu-xenial
+  version: latest
+
+instance_groups:
+- name: containerd
+  instances: 1
+  vm_type: default
+  networks:
+  - name: default
+  azs: [z1]
+  stemcell: xenial
+  jobs:
+  - name: containerd
+    release: containerd
+
+update:
+  canaries: 1
+  max_in_flight: 3
+  canary_watch_time: 1000-240000
+  update_watch_time: 1000-240000
