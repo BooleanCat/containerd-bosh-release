@@ -1,10 +1,49 @@
 ---
 name: containerd
 
-templates: {}
+templates:
+  containerd.toml.erb: config/containerd.toml
 
 packages:
 - runc
 - containerd
 
-properties: {}
+properties:
+  containerd.root:
+    default: /var/vcap/data/containerd/root
+
+  containerd.state:
+    default: /var/vcap/data/containerd/state
+
+  containerd.subreaper:
+    default: true
+
+  containerd.oom_score:
+    default: -999
+
+  containerd.grpc.address:
+    default: /var/vcap/sys/run/containerd/containerd.sock
+
+  containerd.grpc.uid:
+    default: null
+
+  containerd.grpc.gid:
+    default: null
+
+  containerd.grpc.max_recv_message_size:
+    default: null
+
+  containerd.grpc.max_send_message_size:
+    default: null
+
+  containerd.debug.address:
+    default: /var/vcap/sys/run/containerd/debug.sock
+
+  containerd.debug.uid:
+    default: null
+
+  containerd.debug.gid:
+    default: null
+
+  containerd.debug.level:
+    default: info

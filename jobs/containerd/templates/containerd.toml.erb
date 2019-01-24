@@ -1,0 +1,29 @@
+root = "<%= p('containerd.root') %>"
+state = "<%= p('containerd.state') %>"
+subreaper = <%= p('containerd.subreaper') %>
+oom_score = <%= p('containerd.oom_score') %>
+
+[grpc]
+address = "<%= p('containerd.grpc.address') %>"
+<% if_p('containerd.grpc.uid') do |value| -%>
+uid = <%= value %>
+<% end -%>
+<% if_p('containerd.grpc.gid') do |value| -%>
+gid = <%= value %>
+<% end -%>
+<% if_p('containerd.grpc.max_recv_message_size') do |value| -%>
+max_recv_message_size = <%= value %>
+<% end -%>
+<% if_p('containerd.grpc.max_send_message_size') do |value| -%>
+max_send_message_size = <%= value %>
+<% end -%>
+
+[debug]
+address = "<%= p('containerd.debug.address') %>"
+<% if_p('containerd.debug.uid') do |value| -%>
+uid = <%= value %>
+<% end -%>
+<% if_p('containerd.debug.gid') do |value| -%>
+gid = <%= value %>
+<% end -%>
+level = "<%= p('containerd.debug.level') %>"
