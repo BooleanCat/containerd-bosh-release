@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+tar -xzf libseccomp/libseccomp-2.3.3.tar.gz
+
+(
+cd libseccomp-2.3.3
+./configure --prefix="$BOSH_INSTALL_TARGET"
+make
+make install
+)

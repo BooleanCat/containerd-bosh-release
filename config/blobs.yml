@@ -1,3 +1,7 @@
+libseccomp/libseccomp-2.3.3.tar.gz:
+  size: 564546
+  object_id: a75f7e52-038d-4892-509a-f99a08047704
+  sha: 89b1f35447b1891a3051de979dc92ad9f7258b60
 pkg-config/pkg-config-0.29.2.tar.gz:
   size: 2016830
   object_id: f4bc9140-339e-417b-6694-f189118ff952
