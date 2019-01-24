@@ -1,0 +1,6 @@
+---
+name: runc
+dependencies:
+- pkg-config
+- golang-1-linux
+files: []

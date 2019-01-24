@@ -3,6 +3,7 @@ name: containerd
 
 templates: {}
 
-packages: []
+packages:
+- runc
 
 properties: {}
