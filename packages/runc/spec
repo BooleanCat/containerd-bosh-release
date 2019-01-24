@@ -4,4 +4,4 @@ dependencies:
 - pkg-config
 - golang-1-linux
 - libseccomp
-files: []
+files: [github.com/opencontainers/runc/**/*]
