@@ -1,3 +1,6 @@
 [submodule "src/github.com/opencontainers/runc"]
 	path = src/github.com/opencontainers/runc
 	url = https://github.com/opencontainers/runc
+[submodule "src/github.com/containerd/containerd"]
+	path = src/github.com/containerd/containerd
+	url = https://github.com/containerd/containerd
